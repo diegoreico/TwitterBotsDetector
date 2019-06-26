@@ -10,9 +10,11 @@ setup(
     author='Diego Reiriz Cores',
     author_email='dreiriz@gmail.com',
     keywords=['Bot', 'Twitter', 'Detector'],
-    entry_points={'console_scripts': ['ars = ars.cli:main']},
+    entry_points={'console_scripts': ['botdetector = botdetector.cli:main']},
     install_requires=[
         'click',
+        'Flask',
+        'apispec',
         'numpy',
         'pandas',
         'scikit-learn',
