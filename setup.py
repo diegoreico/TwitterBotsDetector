@@ -14,7 +14,6 @@ setup(
     install_requires=[
         'click',
         'Flask',
-        'apispec',
         'numpy',
         'pandas',
         'scikit-learn',

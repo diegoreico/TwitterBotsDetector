@@ -1,7 +1,6 @@
 def create_http_api():
     
     from flask import Flask
-    from flask_apispec import FlaskApiSpec
 
     app = Flask(__name__)
 
@@ -9,5 +8,4 @@ def create_http_api():
     def hello():
         return "Hello World!"
 
-    docs = FlaskApiSpec(app)
-    docs.register(hello)
+    app.run()
