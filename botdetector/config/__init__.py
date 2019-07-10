@@ -1,1 +1,1 @@
-from botdetector.config.data_source_config import *
+from botdetector.config.twitter_config import *

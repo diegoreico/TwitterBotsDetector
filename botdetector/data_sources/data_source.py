@@ -2,7 +2,7 @@ import logging
 
 import pymysql
 
-from botdetector.config import data_source_config as config
+from botdetector.config import twitter_config as config
 
 
 class DataSource(object):
