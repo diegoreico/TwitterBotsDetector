@@ -1,1 +1,0 @@
-from botdetector.config.twitter_config import *

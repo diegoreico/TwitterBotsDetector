@@ -1,1 +1,0 @@
- grep -oiw "#[a-zA-Z]*\w" reduced.csv > hashtags
