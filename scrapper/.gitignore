@@ -138,3 +138,5 @@ dmypy.json
 
 # .env config file
 .env
+
+results
