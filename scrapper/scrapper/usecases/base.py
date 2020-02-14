@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-class BaseUseCase(ABC):
 
+class BaseUseCase(ABC):
     def __init__(self):
         super().__init__()
 
