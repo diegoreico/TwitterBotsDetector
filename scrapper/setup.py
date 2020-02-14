@@ -17,6 +17,7 @@ setup(
         "pytest-dotenv==0.4.0",
         "python-dotenv==0.11.0",
         "black==19.10b0",
+        "tweepy==3.8.0",
     ],
     description="Tool that given a set of ids, download information about it",
     author="Gradiant",

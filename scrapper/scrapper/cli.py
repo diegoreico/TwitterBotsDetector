@@ -1,6 +1,8 @@
 import click
 import logging
+from dotenv import load_dotenv
 
+from scrapper.usecases.ScrapTweetsFromFile import ScrapTweetsFromFile
 
 @click.group(invoke_without_command=True)
 @click.pass_context
@@ -27,8 +29,9 @@ def scrap(file, user_id, user_name):
     logging.info("invoking scrap command")
 
     if not file is None:
-        # scrap from file
-        pass
+        usecase = ScrapTweetsFromFile(file)
+        usecase.execute()
+
     elif not user_id is None:
         # todo: scrap from user id
         pass
