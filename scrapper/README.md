@@ -1,4 +1,4 @@
-# Borgwarner ETL Tool
+# Twitter Scrapper
 
 ## Index
 
@@ -16,21 +16,7 @@
 ## <a name="requirements">Requirements</a>
 
 This project has been developed using [Setuptools](https://setuptools.readthedocs.io/en/latest/). 
-So, `Python 3.6` and `pip3` are required.
-
-You also need command line utility `ssconvert`, you can install it on Ubuntu using the following command:
-
-```
-apt-get install ssconvert
-```
-
-an alternative to install this package in the system is to install the following package 
-
-```bash
-apt-get install gnumeric
-```
-
-`ssconvert` version used for development was `1.12.35`
+So, `Python 3.6.9` and `pip3` are required.
 
 ## <a name="installation">Installation</a>
 
@@ -73,17 +59,9 @@ pytest etl/tests/validation
 ## <a name="run">Run</a>
 
 The package has a command-line entry point configured. This entry point is built using the library 
-[Click](https://palletsprojects.com/p/click/). To get all the possible commands, use `borgwarner-etl --help`.
+[Click](https://palletsprojects.com/p/click/). To get all the possible commands, use `twitter-profile-scrapper --help`.
 
 ```bash
 # starts a server with the HTTP ETL API
-borgwarner-etl server
+twitter-profile-scrapper server
 ```
-
-### Api documentation
-
-Swagger generated API documentation for a running server, can be found at `http://ip:port/docs` or `http://ip:port/redocs`
-
-![doc](./assets/doc.png)
-
-![redoc](./assets/redoc.png)
