@@ -10,6 +10,7 @@ setup(
         "SQLAlchemy==1.3.13",
         "psycopg2-binary==2.8.4",
         "requests==2.22.0",
+        "pandas==1.0.1",
         "pytest==5.3.5",
         "pytest-cov==2.8.1",
         "pylint==2.4.4",
