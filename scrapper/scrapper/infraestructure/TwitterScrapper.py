@@ -7,7 +7,7 @@ from tweepy.error import TweepError
 
 from scrapper.configuration.config import TwitterConfig
 
-class TwitterScrapService():
+class TwitterScrapper():
 
     def __init__(self):
         self._auth = tweepy.OAuthHandler(TwitterConfig.CONSUMER_KEY, TwitterConfig.CONSUMER_SECRET)
