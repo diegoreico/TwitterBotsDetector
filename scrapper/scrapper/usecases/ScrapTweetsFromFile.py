@@ -19,12 +19,14 @@ class ScrapTweetsFromFile(BaseUseCase):
         twitter_service = TwitteService()
         result_storage = ResultStorageService()
 
-        ids_to_retrieve = file_service.obtai_userid_from_labeled_file(self._file)
+        task_name = file_service.extract_file_name(self._file)
+
+        ids_to_retrieve = file_service.obtain_userid_from_labeled_file(self._file)
         profiles = twitter_service.scrap_profiles_from_user_ids(ids_to_retrieve)
         profiles = pd.DataFrame(profiles, columns=profiles[0].keys())
-        result_storage.store_user_profiles(profiles)
+        result_storage.store_user_profiles(profiles, task_name)
 
         tweets = twitter_service.scrap_tweets_from_users_timelines(ids_to_retrieve)
         tweets = pd.DataFrame(tweets, columns=tweets[0].keys())
-        result_storage.store_tweets(tweets)
+        result_storage.store_tweets(tweets, task_name)
 

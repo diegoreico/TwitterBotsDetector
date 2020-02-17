@@ -11,9 +11,9 @@ class ResultStorageService:
         self._timestamp = datetime.datetime.now()
         self._timestamp = self._timestamp.replace(microsecond=0)
 
-    def store_user_profiles(self, profiles: pd.DataFrame) -> None:
+    def store_user_profiles(self, profiles: pd.DataFrame, task_name: str = "all") -> None:
         # creates folder
-        folder_profiles = config.Folders.OUTPUT_DIR_PROFILES
+        folder_profiles = config.Folders.OUTPUT_DIR_PROFILES / task_name
         Path(folder_profiles).mkdir(parents=True, exist_ok=True)
 
         # builds file path
@@ -24,9 +24,9 @@ class ResultStorageService:
         # stores file
         profiles.to_csv(dataframe_profile_path)
 
-    def store_tweets(self, tweets: pd.DataFrame) -> None:
+    def store_tweets(self, tweets: pd.DataFrame, task_name: str = "all") -> None:
         # creates folder
-        folder_timelines = config.Folders.OUTPUT_DIR_TIMELINES
+        folder_timelines = config.Folders.OUTPUT_DIR_TIMELINES / task_name
         Path(folder_timelines).mkdir(parents=True, exist_ok=True)
 
         # build file path
