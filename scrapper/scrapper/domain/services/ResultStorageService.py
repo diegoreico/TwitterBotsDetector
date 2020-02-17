@@ -8,7 +8,8 @@ from scrapper.configuration import config
 class ResultStorageService:
 
     def __init__(self):
-        self._timestamp = datetime.datetime.now().timestamp()
+        self._timestamp = datetime.datetime.now()
+        self._timestamp = self._timestamp.replace(microsecond=0)
 
     def store_user_profiles(self, profiles: pd.DataFrame) -> None:
         # creates folder

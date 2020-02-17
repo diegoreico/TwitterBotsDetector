@@ -8,6 +8,8 @@ from scrapper.usecases.ScrapTweetsFromFile import ScrapTweetsFromFile
 @click.pass_context
 def main(ctx):
 
+    logging.basicConfig(level=logging.INFO)
+
     if ctx is not None:
         click.echo("An action should be specified. Try --help to check the options")
 

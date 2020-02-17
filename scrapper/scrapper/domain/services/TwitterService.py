@@ -20,7 +20,7 @@ class TwitteService:
 
             progress += 1
             if progress % 10 == 0:
-                logging.debug(f'Current progress retrieving profiles:'
+                logging.info(f'Current progress retrieving profiles:'
                               f' {progress/total}')
 
         return profiles
@@ -44,7 +44,7 @@ class TwitteService:
 
             progress += 1
             if progress % 10 == 0:
-                logging.debug(f'Current progress retrieving user timelines:'
+                logging.info(f'Current progress retrieving user timelines:'
                               f' {progress / total}')
 
         return tweets
