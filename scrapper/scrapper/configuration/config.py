@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-load_dotenv()
+load_dotenv('.env')
 
 class TwitterConfig:
     CONSUMER_KEY=os.getenv('CONSUMER_KEY')
