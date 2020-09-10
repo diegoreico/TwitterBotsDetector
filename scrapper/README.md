@@ -6,8 +6,7 @@
 2. [Requirements](#requirements)
 3. [Installation](#installation)
 4. [Configuration](#configuration)
-5. [Tests](#tests)
-6. [Run](#run)
+5. [Run](#run)
 
 ## <a name="overview">Overview</a>
 
@@ -37,31 +36,7 @@ A new requirement must be added to the `install_requires` property within the `s
 All the configuration variables are included on **.env** files. For 
 further information read the [related documentation](https://pypi.org/project/python-dotenv/). An example **.env** file is provided `.env.example` you can use it as a base **.env** file if you rename it to `.env`
 
-## <a name="tests">Tests</a>
-
-```bash
-# All tests
-pytest
-
-# All tests verbose mode (not encouraged use logging module instead)
-pytest -s
-
-# Unit tests
-pytest etl/tests/unit
-
-# Integration tests
-pytest etl/tests/integration
-
-# Validation tests
-pytest etl/tests/validation
-```
-
 ## <a name="run">Run</a>
 
 The package has a command-line entry point configured. This entry point is built using the library 
-[Click](https://palletsprojects.com/p/click/). To get all the possible commands, use `twitter-profile-scrapper --help`.
-
-```bash
-# starts a server with the HTTP ETL API
-twitter-profile-scrapper server
-```
+[Click](https://palletsprojects.com/p/click/). To get all the possible commands, use `python -m scrapper.cli --help`.
