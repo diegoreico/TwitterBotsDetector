@@ -46,4 +46,4 @@ def scrap(file, user_id, user_name):
 
 if __name__ == "__main__":
     # execute only if run as a script
-    print("MAIN")
+    main()
